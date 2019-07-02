@@ -82,7 +82,7 @@ constructor(){
 
    async fetch(){
      
-    await axios.get("/topics")
+    await axios.get("http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000/topics")
     .then(res=>{
       // console.log("*****************1",this.state.topics);
       var v=this.state.topics;
