@@ -1,0 +1,140 @@
+@media(min-width:700px){
+    .main_container{
+      width: 50%;
+    }
+    .dropdowns{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  @media(max-width:700px){
+    .main_container{
+      width: 75%;
+    }
+  
+  }
+  
+  img{
+    height: 25px;
+    margin: 3px;
+  }
+  
+  .main_container{
+     margin: auto; 
+     align-self: center; 
+  }
+  
+  .new_back{
+    background-color: whitesmoke;
+    margin: 8px ;
+    border: 2px;
+    cursor: pointer;
+  }
+  
+  input{
+    width: 100%;
+    padding: 12px;
+    border-style:solid;
+    border-color: #0c8bcd;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  .form-control{
+    width: 100%;
+    padding: 12px;
+    border-style:solid;
+    border-color: #0c8bcd;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  .dropdowns{
+    
+    
+      overflow: hidden;
+  }
+  
+  .category{
+    flex:1;
+    margin: 8px;
+    margin-left: 0px;
+  }
+  
+  .tags{
+    flex:1;
+  }
+  
+  .dropbtn {
+    cursor: pointer;
+    font-size: 16px;  
+    border: groove;
+    color: black;
+    padding: 4px ;
+    background-color:whitesmoke ; 
+    
+    margin: 0;
+    width: 100%;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .tags{
+    border: 5px;
+  }
+  
+  #editor-container {
+    height: 275px;
+  }
+  
+  .last_row{
+    display: flex;
+    flex-direction: row;
+    border: none;
+  }
+  
+  .create_button{
+    color: white;
+    background-color: #0c8bcd; 
+    margin: 4px;
+  }
+  
+  .cancel{
+    align-self: center;
+    margin: auto;
+  }
+  
+  .text_color{
+    color: #8f8f8f;
+  }
+  
+  .hide_preview{
+    float: right;
+    align-self: center;
+    margin: auto;
+  }
+
+  .newtopic_icon{
+    float: left;
+  }
+
+  .close_mark{
+    float: right;
+  }
+  
+  /* 176 177231, 180353 */
