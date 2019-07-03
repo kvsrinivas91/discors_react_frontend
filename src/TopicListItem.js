@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import {Link} from 'react-router-dom'
 import Moment from 'react-moment';
-
+let baseUrl= process.env.PRODUCTION ? "http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000" : "http://localhost:3000";
 
 const { Component } = React;
 
@@ -82,7 +82,7 @@ constructor(){
 
    async fetch(){
      
-    await axios.get("http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000/topics")
+    await axios.get(`${baseUrl}/topics`)
     .then(res=>{
       // console.log("*****************1",this.state.topics);
       var v=this.state.topics;

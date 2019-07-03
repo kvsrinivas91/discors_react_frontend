@@ -4,6 +4,7 @@ import "react-quill/dist/quill.snow.css"; // ES6
 import axios from "axios";
 import "./static/comment.css";
 import { Link, Redirect } from "react-router-dom";
+let baseUrl="http://localhost:3000";
 // import Axios from "axios";
 class MyComponent extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class MyComponent extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     axios
-      .post(`/topics/${this.props.comment.match.params.topic_id}/comments`, {
+      .post(`${baseUrl}/topics/${this.props.comment.match.params.topic_id}/comments`, {
         comment: {content: this.state.comment}
       },{ ...this.state })
       .then(res => {

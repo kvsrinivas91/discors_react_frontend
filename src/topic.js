@@ -3,6 +3,9 @@ import axios from "axios";
 import "./static/topic_app.css";
 import {Link} from 'react-router-dom'
 import Moment from 'react-moment';
+// let baseUrl="http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000";
+let baseUrl="http://localhost:3000"
+
 // import 'moment-timezone';
 var HtmlToReactParser = require('html-to-react').Parser;
 
@@ -168,7 +171,7 @@ class topic extends Component {
   async fetch() {
     console.log("&&&&&&&&&3", this.props.topic.match.params.topic_id);
 
-    var url = `/topics/${this.props.topic.match.params.topic_id}`;
+    var url = `${baseUrl}/topics/${this.props.topic.match.params.topic_id}`;
 
     await axios.get(url).then(response => {
       // console.log("**********1", response.data.topic);
