@@ -4,7 +4,9 @@ import "react-quill/dist/quill.snow.css"; // ES6
 import axios from "axios";
 import "./static/comment.css";
 import { Link, Redirect } from "react-router-dom";
-let baseUrl="http://localhost:3000";
+
+let baseUrl= process.env.PRODUCTION ? "http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000" : "http://localhost:3000";
+
 // import Axios from "axios";
 class MyComponent extends React.Component {
   constructor(props) {

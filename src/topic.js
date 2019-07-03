@@ -3,15 +3,13 @@ import axios from "axios";
 import "./static/topic_app.css";
 import {Link} from 'react-router-dom'
 import Moment from 'react-moment';
-// let baseUrl="http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000";
-let baseUrl="http://localhost:3000"
+let baseUrl= process.env.PRODUCTION ? "http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000" : "http://localhost:3000";
 
 // import 'moment-timezone';
 var HtmlToReactParser = require('html-to-react').Parser;
 
 var htmlToReactParser = new HtmlToReactParser();
  
-
 const { Component } = React;
 
 const Item = ({ data }) => {
@@ -91,7 +89,7 @@ const Item = ({ data }) => {
           </Link>
 
         </div>
-        <br />
+        <br />lo
         <div class="bottom_bar">
           <div class="created">
             <div>created</div>

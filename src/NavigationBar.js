@@ -3,6 +3,7 @@ import "./App.css";
 import { Link } from "react-router-dom";
 import dicorslogo from "./static/discorslogo.png";
 
+
 function NavigationBar() {
   return (
     <div>
