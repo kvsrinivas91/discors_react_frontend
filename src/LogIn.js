@@ -3,7 +3,7 @@ import "./static/LogIn.css";
 import { Link,Redirect } from "react-router-dom";
 import axios from "axios";
 let baseUrl = process.env.PRODUCTION
-  ? "http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000"
+  ? "http://ec2-18-191-225-185.us-east-2.compute.amazonaws.com:3000"
   : "http://localhost:3000";
 
 class MyComponent extends React.Component {
