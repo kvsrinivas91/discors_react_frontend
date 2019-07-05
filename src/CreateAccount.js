@@ -55,7 +55,7 @@ function CreateAccount() {
     Email
   </div>
 
-  <form action="http://localhost:3000/users" method="post" className="form-inline">
+  <form action={`${baseUrl}/users`} method="post" className="form-inline">
 
   <input type="text" name="email"  required/>
 

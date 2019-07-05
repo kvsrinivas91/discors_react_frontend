@@ -3,8 +3,8 @@ import axios from 'axios';
 import './App.css';
 import {Link} from 'react-router-dom'
 import Moment from 'react-moment';
-// let baseUrl= process.env.PRODUCTION ? "http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000" : "http://localhost:3000";
-let baseUrl ="http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000";   
+let baseUrl= process.env.PRODUCTION ? "http://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000" : "http://localhost:3000";
+// let baseUrl ="https://ec2-18-217-54-224.us-east-2.compute.amazonaws.com:3000";   
 
 const { Component } = React;
 
@@ -21,7 +21,6 @@ const Item = ({ data })=>{
      </Link>
      <div class="topic-down flex-container">
 
-             
       {(() => {
         switch (data.category) {
           case "discourse":   return <div class="topic-image topic-image1"></div>;
@@ -41,7 +40,7 @@ const Item = ({ data })=>{
      
   <div class="user-logos ">
     {/* <img class="user-logo-image" src={data.likedUserIcon[0].url}/>       */}
-    {data.likedUserIcon.slice(1).map((url, index)=>(
+    {data.likedUserIcon.map((url, index)=>(
       <img class="user-logo-image1" src={url.url}/>
     ))}
    
@@ -53,7 +52,7 @@ const Item = ({ data })=>{
 
  <div class="no2">
  {data.comments}
- {console.log("~~~~~~~~11",data)}
+ {/* {console.log("~~~~~~~~11",data)} */}
  </div>
 
  <div class="no3">
@@ -76,7 +75,31 @@ constructor(){
   this.state={
     topics:[]
   }
+  this.handleCategoryChange=this.handleCategoryChange.bind(this);
 }
+
+handleCategoryChange(event) {
+
+  this.setState({
+    category: event.target.value
+    
+  });
+
+  axios.get(`${baseUrl}/categories/${event.target.value}/topics`)
+    .then(res=>{
+      // console.log("*****************1",this.state.topics);
+      // var v=this.state.topics;
+      // res.data.topic.map(topic_item=>(
+      // v.push(topic_item)
+      // ))
+      this.setState({
+        topics:res.data.topic
+      });
+      // console.log("*****************2",this.state.topics);
+    })
+   
+  
+};
   componentDidMount(){
     this.fetch();
   }
@@ -101,12 +124,24 @@ constructor(){
     <div>
     <div class="main-container">  
     
+    <div class="cat_bar">
+    <select className="categories" value={this.state.category} onChange ={this.handleCategoryChange} name="tag" id="sel1">
+      <option>all </option>
+      <option>discourse</option>
+      <option>movies</option>
+      <option>videos</option>
+      <option>tech</option>
+    </select>
+    
     <Link to="/newtopic">
     <div className="new_topic_container">
       <div className="new_topic"><i class="fa fa-plus" aria-hidden="true"> New Topics</i></div>
-    </div>
+      </div>
     </Link>
+    </div>
     <hr className="hr_first"></hr>
+
+
     {this.state.topics.map(item=>(
       <Item data={item}/>
       

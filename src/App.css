@@ -36,26 +36,11 @@
     margin: auto;
   }
 
-  .new_topic_container{
-    width: 80%;
-    align-self: center;
-    margin: auto; 
-  }
+  
 
 }
 
-.new_topic_container{
-  height: 40px; 
-}
 
-.new_topic{
-  float: right;
-  height: 20px;
-  width: 100px;
-  padding: 10px;
-  background-color: #e9e9e9;
-  color:#646464;
-}
 
 body{
   font-family: sans-serif;
@@ -84,9 +69,9 @@ body{
 }
 
 .signup{
-padding: 5px;
-padding-left: 10px;
-padding-right: 10px;
+padding: 10px;
+padding-left: 12px;
+padding-right: 12px;
 width:65px;
 background-color: #0088cc;
 color: white;
@@ -95,9 +80,9 @@ border: none;
 }
 
 .login{
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
   width:65px;
   background-color: #0088cc;
   color: white;
@@ -228,4 +213,46 @@ hr{
 
 .hr_main{
   width: 80%;
+}
+
+.newtopic_parent{
+  float: right;
+}
+
+.categories_parent{
+  float: left;
+}
+
+.categories{
+    /* width: 100px; */
+    padding: 10px;
+    border-style:solid;
+    border-color: #0c8bcd;
+    border-radius: 4px;
+    /* margin: 5px 0; */
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.new_topic_container{
+  /* height: 40px;  */
+  float: right;
+
+}
+
+.new_topic{
+  height: 20px;
+  width: 100px;
+  padding: 11.5px;
+  background-color: #e9e9e9;
+  color:#646464;
+}
+
+.cat_bar{
+  width: 80%;
+  margin: auto;
 }

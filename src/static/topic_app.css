@@ -151,7 +151,7 @@
 .flexicon1 {
   /* flex:12; */
   position: absolute;
-  right: 160px;
+  right: 125px;
 }
 
 .flexicon2 {
@@ -235,6 +235,15 @@ hr{
   width: 100%;
   margin: px;
   color: #848484;
+}
+.fa-heart-o{
+  cursor: pointer;
+
+}
+
+.fa-heart{
+  cursor: pointer;
+  color: red;
 }
 
 @media (min-width: 700px) {
