@@ -2,9 +2,11 @@ import React from "react";
 import "./static/LogIn.css";
 import { Link,Redirect } from "react-router-dom";
 import axios from "axios";
-let baseUrl = process.env.PRODUCTION
-  ? "http://ec2-18-191-225-185.us-east-2.compute.amazonaws.com:3000"
-  : "http://localhost:3000";
+// let baseUrl = process.env.PRODUCTION
+//   ? "http://ec2-18-191-225-185.us-east-2.compute.amazonaws.com:3000"
+//   : "http://localhost:3000";
+let baseUrl ="https://www.discors.tk";   
+
 
 class MyComponent extends React.Component {
   constructor(props) {

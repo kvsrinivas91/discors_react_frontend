@@ -4,7 +4,7 @@ import "./static/topic_app.css";
 import {Link} from 'react-router-dom'
 import Moment from 'react-moment';
 // let baseUrl= process.env.PRODUCTION ? "http://ec2-18-191-225-185.us-east-2.compute.amazonaws.com:3000" : "http://localhost:3000";
-let baseUrl ="https://clone.discors.tk/topics";   
+let baseUrl ="https://www.discors.tk";   
 // import 'moment-timezone';
 var HtmlToReactParser = require('html-to-react').Parser;
 
