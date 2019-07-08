@@ -4,8 +4,8 @@ import "react-quill/dist/quill.snow.css"; // ES6
 import axios from "axios";
 import "./static/newtopic.css";
 import { Link, Redirect } from "react-router-dom";
-let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
-// let baseUrl ="https://www.discors.tk";   
+// let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
+let baseUrl ="https://www.discors.tk";   
 
 // import Axios from "axios";
 class MyComponent extends React.Component {

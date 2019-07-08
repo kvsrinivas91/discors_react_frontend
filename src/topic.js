@@ -3,8 +3,8 @@ import axios from "axios";
 import "./static/topic_app.css";
 import {Link} from 'react-router-dom'
 import Moment from 'react-moment';
-let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
-// let baseUrl ="https://www.discors.tk";   
+// let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
+let baseUrl ="https://www.discors.tk";   
 // import 'moment-timezone';
 var HtmlToReactParser = require('html-to-react').Parser;
 
