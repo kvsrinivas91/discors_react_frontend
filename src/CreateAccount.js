@@ -3,7 +3,7 @@ import './static/CreateAccount.css';
 import {Link,Redirect} from 'react-router-dom'
 import axios from 'axios';
 // let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
-let baseUrl ="https://backend.discors.tk";   
+let baseUrl ="https://clone.discors.tk";   
 // let baseUrl="ec2-13-126-62-213.ap-south-1.compute.amazonaws.com:3000";
 
 
