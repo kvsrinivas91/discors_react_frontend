@@ -4,7 +4,9 @@ import "./static/topic_app.css";
 import {Link} from 'react-router-dom'
 import Moment from 'react-moment';
 // let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
-let baseUrl ="https://www.discors.tk";   
+let baseUrl ="https://www.discors.tk";  
+// let baseUrl="ec2-13-126-62-213.ap-south-1.compute.amazonaws.com:3000";
+
 // import 'moment-timezone';
 var HtmlToReactParser = require('html-to-react').Parser;
 
@@ -81,7 +83,7 @@ class Item extends React.Component{
             
           </div>
           
-          <div class="sub_container_body">liked
+          <div class="sub_container_body">
             <p>{htmlToReactParser.parse(this.props.data.content)}</p>
           </div>
           <div class="sub_container_body_bottom">

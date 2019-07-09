@@ -17,17 +17,23 @@ import {
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { loginbutton:"Log In",signupbutton:"Signup" }; // You can also pass a Quill Delta here
+    this.state = { loginbutton:"Log In",signupbutton:"Signup", isLoggedIn:false }; // You can also pass a Quill Delta here
     this.handleUser=this.handleUser.bind(this)
+    this.loggedOut=this.loggedOut.bind(this)
     // this.handleTitleChange = this.handleTitleChange.bind(this);
     // this.handleCategoryChange = this.handleCategoryChange.bind(this);
     // this.handleContentChange = this.handleContentChange.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  loggedOut(){
+    this.setState({isLoggedIn:false});
+  }
   
   handleUser(item,item1){
     this.setState({loginbutton:item1});
     this.setState({signupbutton:item});
+    this.setState({isLoggedIn:true});
   }
 
   render() {
@@ -35,7 +41,7 @@ class MyComponent extends React.Component {
       <div>
     <Router>
         <div> 
-        <NavigationBar loginbutton={this.state.loginbutton} signupbutton={this.state.signupbutton}/>
+        <NavigationBar loginbutton={this.state.loginbutton} signupbutton={this.state.signupbutton} handleUser={this.handleUser} loggedOut={this.loggedOut}/>
           
           <Switch>
             <Route exact path='/' component={TopicListItem}></Route>

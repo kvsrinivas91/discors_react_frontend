@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import Moment from 'react-moment';
 // let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
 let baseUrl ="https://www.discors.tk";   
+// let baseUrl="http://ec2-13-126-62-213.ap-south-1.compute.amazonaws.com:3000";
 
 const { Component } = React;
 
@@ -108,7 +109,7 @@ handleCategoryChange(event) {
      
     await axios.get(`${baseUrl}/topics`)
     .then(res=>{
-      // console.log("*****************1",this.state.topics);
+      console.log("*****************1",this.state.topics);
       var v=this.state.topics;
       res.data.topic.map(topic_item=>(
       v.push(topic_item)
