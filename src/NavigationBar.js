@@ -20,7 +20,7 @@ class NavigationBar extends React.Component {
   render() {
     var leftButton;
     var rightButton;
-    if(this.props.signupbutton=="Signup"){
+    if(this.props.signupbutton==="Signup"){
       leftButton=<Link to="/create_account">
       <button class="signup">{this.props.signupbutton}</button>
     </Link>
@@ -31,7 +31,7 @@ class NavigationBar extends React.Component {
     // </Link>
     }
 
-    if(this.props.loginbutton=="Log In"){
+    if(this.props.loginbutton==="Log In"){
       rightButton=<Link className="login_link" to="/login">
       <button class="login">{this.props.loginbutton}</button>
     </Link>
@@ -48,7 +48,7 @@ class NavigationBar extends React.Component {
           <div class="topbar">
             <Link to="/">
               {/* <div class="logo"> */}
-              <img class="logoimg" src={dicorslogo} />
+              <img class="logoimg" src={dicorslogo} alt="logo"/>
               {/* http://www.picturetopeople.org/text_generator/others/transparent/transparent-text-generator.html  dokyo*/}
               {/* </div> */}
             </Link>

@@ -3,7 +3,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css"; // ES6
 import axios from "axios";
 import "./static/comment.css";
-import { Link, Redirect } from "react-router-dom";
+// import { Link, Redirect } from "react-router-dom";
 
 // let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
 let baseUrl ="https://clone.discors.tk";   
@@ -19,7 +19,7 @@ class MyComponent extends React.Component {
     // this.handleCategoryChange = this.handleCategoryChange.bind(this);
     this.handleContentChange = this.handleContentChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    console.log("$$$$$$$$$1",this.props.comment.match.params.topic_id)
+    // console.log("$$$$$$$$$1",this.props.comment.match.params.topic_id)
   }
   
   handleSubmit(event) {
@@ -37,12 +37,12 @@ class MyComponent extends React.Component {
         // console.log("{}{}{}{}{}{}{}",this.state);
       })
       .catch(err => {
-        console.log(err);
+        // console.log(err);
       });
   }
 
   handleContentChange(content, delta, source, editor) {
-    console.log(content)
+    // console.log(content)
     this.setState({
         comment : content,
     });

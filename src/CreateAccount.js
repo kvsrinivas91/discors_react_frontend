@@ -1,6 +1,6 @@
 import React from 'react'
 import './static/CreateAccount.css';
-import {Link,Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import axios from 'axios';
 // let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
 let baseUrl ="https://clone.discors.tk";   
@@ -31,12 +31,12 @@ class CreateAccount extends React.Component{
       this.props.githistory.push("/");
     })
     .catch(err => {
-      console.log("!!!!!",err);
+      // console.log("!!!!!",err);
     });
   }
 
   handleEmailChange(value) {
-    console.log(value);
+    // console.log(value);
     // console.log("this.ref.title.value111".this.ref.title.value)
 
     this.setState({
@@ -45,7 +45,7 @@ class CreateAccount extends React.Component{
   }
 
   handlePasswordChange(value) {
-    console.log(value);
+    // console.log(value);
     this.setState({
       password: this.refs.password.value
     });
@@ -75,7 +75,7 @@ class CreateAccount extends React.Component{
   </div>
   < Link to={{pathname:'/'}}>
   <div class="close_mark">
-    <img class="close_mark_logo" src="https://image.flaticon.com/icons/svg/32/32178.svg"/>
+    <img class="close_mark_logo" src="https://image.flaticon.com/icons/svg/32/32178.svg" alt="close"/>
   </div>
   </ Link>
 </div>

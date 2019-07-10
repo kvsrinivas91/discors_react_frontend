@@ -3,8 +3,8 @@ import axios from 'axios';
 import './App.css';
 import {Link} from 'react-router-dom'
 import Moment from 'react-moment';
-// let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
-let baseUrl ="https://clone.discors.tk";
+let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
+// let baseUrl ="https://clone.discors.tk";
 // let baseUrl="http://ec2-13-126-62-213.ap-south-1.compute.amazonaws.com:3000";
 
 const { Component } = React;
@@ -42,7 +42,7 @@ const Item = ({ data })=>{
   <div class="user-logos ">
     {/* <img class="user-logo-image" src={data.likedUserIcon[0].url}/>       */}
     {data.likedUserIcon.map((url, index)=>(
-      <img class="user-logo-image1" src={url.url}/>
+      <img class="user-logo-image1" src={url.url} alt="user"/>
     ))}
    
  </div>
@@ -109,7 +109,7 @@ handleCategoryChange(event) {
      
     await axios.get(`${baseUrl}/topics`)
     .then(res=>{
-      console.log("*****************1",this.state.topics);
+      // console.log("*****************1",this.state.topics);
       var v=this.state.topics;
       res.data.topic.map(topic_item=>(
       v.push(topic_item)

@@ -21,7 +21,7 @@ class Item extends React.Component{
     this.state={liked:this.props.data.isLiked};
     this.likeButton1=this.likeButton1.bind(this)
     this.unLikeButton1=this.unLikeButton1.bind(this)
-    console.log("this.state.liked",this.state.liked);
+    // console.log("this.state.liked",this.state.liked);
   }
   
   likeButton1(){
@@ -59,7 +59,8 @@ class Item extends React.Component{
         <div class="sub_container">
           {/* <hr/>   */}
           <div class="b_b user">
-                <img class="tt1" src={this.props.data.url}/>{console.log("222222",this.props.data.url)}
+                <img class="tt1" src={this.props.data.url} alt="user"/>
+                {/* {console.log("222222",this.props.data.url)} */}
           </div>
           <div class="sub_container_top">
             <div class="left">
@@ -90,7 +91,7 @@ class Item extends React.Component{
         
           {(() => {
           if(this.state.liked===false){
-            console.log("liked")
+            // console.log("liked")
             return(
             <div class="heart flexicon1" onClick={this.likeButton1} >
             <i class="fa fa-heart-o" />
@@ -98,7 +99,7 @@ class Item extends React.Component{
             )
           }
           else{
-            console.log("unliked")
+            // console.log("unliked")
             return(
             <div class="heart flexicon1" onClick={this.unLikeButton1} >
               <i class="fa fa-heart" />
@@ -123,7 +124,7 @@ class Item extends React.Component{
             
             {/* <Link to="/comment"> */}
             < Link to={{pathname:`/${this.props.data.id}/comment`, state: {topicId: this.props.data.id}}}>
-              {console.log("$$$$$$$$$$$$3",this.props.data.id )}
+              {/* {console.log("$$$$$$$$$$$$3",this.props.data.id )} */}
               <div id="replyid"  class="reply flexicon4">
                 <i class="fa fa-reply" /> Reply
               </div>
@@ -138,6 +139,7 @@ class Item extends React.Component{
                 <img
                   class="tt1"
                   src={this.props.data.url}
+                  alt="user"
                   />
                 {/* <Moment fromNow ago>{data.createdAt}</Moment> */}
               </div>
@@ -145,7 +147,7 @@ class Item extends React.Component{
             <div class="lastreply">
               <div>Last reply</div>
                {/* <div><img class="tt1" src={this.props.data.comments[this.props.data.comments.length-1].url}/></div>  */}
-              {console.log("5555555555555555",this.props.data)}
+              {/* {console.log("5555555555555555",this.props.data)} */}
             </div>
             <div class="replies">
               <div class="four">{this.props.data.replyCount}</div>
@@ -171,7 +173,7 @@ class Item extends React.Component{
           <div class="sub_container1">
             <hr />
             <div class="b_b user">
-                  <img class="tt1" src={cmt.url} />
+                  <img class="tt1" src={cmt.url} alt="user" />
                 </div>
             <div class="sub_container_top">
              
@@ -215,18 +217,18 @@ class topic extends Component {
 
   likeButton() {
     // event.preventDefault();
-    console.log("INside like button111")
+    // console.log("INside like button111")
     axios
       .post(`${baseUrl}/topics/${this.props.topic.match.params.topic_id}/likes`)
       .then(res => {
         // this.props.history.push("/")
 
-        console.log(res);
-        console.log(res.data);
+        // console.log(res);
+        // console.log(res.data);
 
       })
       .catch(err => {
-        console.log(err);
+        // console.log(err);
       });
   }
 
@@ -237,12 +239,12 @@ class topic extends Component {
       .then(res => {
         // this.props.history.push("/")
 
-        console.log(res);
-        console.log(res.data);
+        // console.log(res);
+        // console.log(res.data);
 
       })
       .catch(err => {
-        console.log(err);
+        // console.log(err);
       });
   }
 
@@ -251,7 +253,7 @@ class topic extends Component {
   }
 
   async fetch() {
-    console.log("&&&&&&&&&3", this.props.topic.match.params.topic_id);
+    // console.log("&&&&&&&&&3", this.props.topic.match.params.topic_id);
 
     var url = `${baseUrl}/topics/${this.props.topic.match.params.topic_id}`;
 
@@ -263,7 +265,9 @@ class topic extends Component {
       this.setState((this.state.topic_current = v));
       // console.log("**********2", this.state.topic_current);
     })
-    .catch(err => console.log(err))
+    // .catch(err => 
+    //   console.log(err)
+    //   )
   }
   
   render() {

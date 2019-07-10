@@ -3,7 +3,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css"; // ES6
 import axios from "axios";
 import "./static/newtopic.css";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 // let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
 let baseUrl ="https://clone.discors.tk";   
 // let baseUrl="ec2-13-126-62-213.ap-south-1.compute.amazonaws.com:3000";
@@ -26,17 +26,17 @@ class MyComponent extends React.Component {
       .post(`${baseUrl}/topics`, { ...this.state })
       .then(res => {
         this.props.history.push("/")
-        console.log(res);
-        console.log(res.data);
+        // console.log(res);
+        // console.log(res.data);
 
       })
       .catch(err => {
-        console.log(err);
+        // console.log(err);
       });
   }
 
   handleTitleChange(value) {
-    console.log(value);
+    // console.log(value);
     this.setState({
       title: this.refs.title.value
     });
@@ -71,6 +71,7 @@ class MyComponent extends React.Component {
                 <img
                   class="close_mark_logo"
                   src="https://image.flaticon.com/icons/svg/32/32178.svg"
+                  alt="close"
                 />
               </div>
             </Link>

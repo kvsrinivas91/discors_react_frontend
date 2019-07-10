@@ -10,7 +10,6 @@ import Comment from "./comment"
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Switch
 } from 'react-router-dom';
 

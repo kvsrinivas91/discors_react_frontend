@@ -62,14 +62,14 @@ class MyComponent extends React.Component {
         // console.log("{}{}{}{}{}{}{}",this.state);
       })
       .catch(err => {
-        console.log("!!!!!",err);
+        // console.log("!!!!!",err);
       });
-      console.log("@@@@99",this.state.redirect);
+      // console.log("@@@@99",this.state.redirect);
 
   }
 
   handleEmailChange(value) {
-    console.log(value);
+    // console.log(value);
     // console.log("this.ref.title.value111".this.ref.title.value)
 
     this.setState({
@@ -78,7 +78,7 @@ class MyComponent extends React.Component {
   }
 
   handlePasswordChange(value) {
-    console.log(value);
+    // console.log(value);
     this.setState({
       password: this.refs.password.value
     });
@@ -105,6 +105,7 @@ class MyComponent extends React.Component {
                 <img
                   class="close_mark_logo"
                   src="https://image.flaticon.com/icons/svg/32/32178.svg"
+                  alt="user"
                 />
               </div>
             </Link>
