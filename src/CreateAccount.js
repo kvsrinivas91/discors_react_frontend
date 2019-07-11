@@ -28,7 +28,7 @@ class CreateAccount extends React.Component{
        {user :{email:this.state.email, password:this.state.password, username:this.state.username, name:this.state.name}}
     )
     .then(response=>{
-      this.props.githistory.push("/");
+      this.props.history.push("/");
     })
     .catch(err => {
       // console.log("!!!!!",err);
