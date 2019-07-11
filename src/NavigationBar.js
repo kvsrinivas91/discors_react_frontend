@@ -7,8 +7,8 @@ class NavigationBar extends React.Component {
   constructor(props) {
     super(props);
     this.logOut=this.logOut.bind(this)
-    console.log("*********8")
-    console.log(this.props.signupbutton,this.props.loginbutton)
+    // console.log("*********8")
+    // console.log(this.props.signupbutton,this.props.loginbutton)
     // console.log("this.props",this.props.loginbutton);
   }
 
