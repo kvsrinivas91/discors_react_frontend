@@ -3,8 +3,8 @@ import axios from "axios";
 import "./static/topic_app.css";
 import {Link} from 'react-router-dom'
 import Moment from 'react-moment';
-// let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
-let baseUrl ="https://clone.discors.tk";  
+let baseUrl= process.env.PRODUCTION ? "https://www.discors.tk" : "http://localhost:3000";
+// let baseUrl ="https://clone.discors.tk";  
 // let baseUrl="ec2-13-126-62-213.ap-south-1.compute.amazonaws.com:3000";
 
 // import 'moment-timezone';
